@@ -1,0 +1,39 @@
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    h1 {
+        margin: 30px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 65%;
+        height: 40px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .cell {
+            flex: 1;
+            text-align: center;
+        }
+
+        .name {
+            width: 150px;
+            margin-left: 15px;
+        }
+
+        .close {
+            color: #299090; 
+            font-size: 21px; 
+            cursor: pointer; 
+            float: right;
+            margin-right: 15px;
+        }
+    }
+}

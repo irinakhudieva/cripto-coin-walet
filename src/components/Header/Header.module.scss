@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px 65px 100px ;
+
+    .title {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 10px;
+    }
+    
+    .popular {
+        width: 270px;
+
+        .popularCoins {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    }
+
+    .total {
+        display: flex;
+        flex-direction: row;
+
+        .totalItem {
+            margin-left: 20px;
+            cursor: pointer;
+
+            h5 {
+                // color: #299090;
+                font-size: 17px;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+
+        input {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            height: 40px;
+            width: 300px;
+            padding-left: 15px;
+            font-size: 1em;
+            outline: none;
+        }
+
+        input:focus {
+            border: 1px solid rgba(0, 0, 0, 0.4);  
+        }
+
+        button {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-left: none;
+            height: 40px;
+            width: 60px;
+        }
+
+        button:focus {
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.4);  
+        }
+    }
+}

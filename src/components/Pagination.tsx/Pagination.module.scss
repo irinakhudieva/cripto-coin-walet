@@ -1,0 +1,32 @@
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    
+    .page {
+        background-color: transparent;
+        margin: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        font-size: 15px;
+        width: 26px;
+        height: 26px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .active {
+        background-color: #cbe7e7;
+        margin: 10px;
+        border: 1px solid #1c7575;
+        font-size: 15px;
+        width: 26px;
+        height: 26px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

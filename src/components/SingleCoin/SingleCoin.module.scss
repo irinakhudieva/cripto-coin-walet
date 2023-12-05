@@ -1,0 +1,63 @@
+.wrapper {
+    margin: 30px 50px;
+    width: 60%;
+    margin: 0 auto;
+
+    .nameCoin {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        span {
+            display: inline-block;
+            border: 3px solid #299090;
+            padding: 7px 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #299090;
+            margin-right: 20px;
+        }
+
+        p {
+            padding: 7px 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #299090;
+        }
+    }
+
+    .singleCoin {
+        // display: flex;
+        // flex-direction: row;
+       
+        width: 100%;
+        
+
+        .item {
+            display: flex;
+            flex-direction: row; 
+            justify-content: space-between;
+            height: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .back {
+        display: block;
+        margin: 0 auto;
+        padding: 5px 10px;
+        background-color: #cbe7e7;
+        border: 1px solid #1c7575;
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        a {
+          text-decoration: none;  
+          color: black;
+        }
+        
+    }
+}
