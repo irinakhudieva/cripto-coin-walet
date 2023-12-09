@@ -4,14 +4,12 @@ import styles from './Header.module.scss';
 import coinsStore from '../../store/coinsStore';
 
 const PopularCoins: React.FC = () => {
-    const {coins, popularCoin, setPopularCoin} = coinsStore;
+
+    const {popularCoin, getPopularCoin} = coinsStore;
 
     React.useEffect(() => {
-        setPopularCoin(coins!)
-    }, [coins])
-
-    console.log(popularCoin)
-
+        getPopularCoin()
+    }, [])
 
     return (
         <div className={styles.popular}>
@@ -20,9 +18,9 @@ const PopularCoins: React.FC = () => {
                 {popularCoin?.map(item => {
                     return (
                         <div key={item.id}>
-                                <p><b>{item.name}</b></p>
-                                <p>{Number(item.priceUsd).toFixed(2)} $</p>
-                            </div>
+                            <p><b>{item.name}</b></p>
+                            <p>{Number(item.priceUsd).toFixed(2)} $</p>
+                        </div>
                     )     
                     }
                 )}

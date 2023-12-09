@@ -12,13 +12,16 @@ const Total = ({setModal}: Props) => {
     const {totalPrice} = cartStore;
 
     return (
-        <div className={styles.total}>
+        <div className={styles.wrapper}>
+           <div className={styles.total}>
                 <IoBriefcaseOutline style={{color: '#299090', fontSize: 45}}/>
                 <div className={styles.totalItem} onClick={() => setModal(true)}>
                     <p>Итого:</p>
                     <h5>{totalPrice.toFixed(2)} USD</h5>
                 </div>
-            </div>
+            </div> 
+        </div>
+        
     )
 }
 

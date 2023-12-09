@@ -22,7 +22,7 @@ const CoinsList: React.FC = observer(() => {
 
     const lastReposIndex = currentPage * perPage;
     const firstReposIndex = lastReposIndex - perPage;
-    const currentCoins = coins?.data.slice(firstReposIndex,lastReposIndex);
+    const currentCoins = coins?.slice(firstReposIndex,lastReposIndex);
 
     return (
         <div className={styles.container}>
@@ -39,7 +39,7 @@ const CoinsList: React.FC = observer(() => {
                 <CoinsItem key={coin.id} coin={coin} index={i} />
             )}
             <Pagination 
-                totalCoins={coins?.data.length} 
+                totalCoins={coins?.length} 
                 perPage={perPage}
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage} />

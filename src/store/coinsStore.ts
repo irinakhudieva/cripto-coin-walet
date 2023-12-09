@@ -1,14 +1,14 @@
 import { makeAutoObservable, runInAction} from "mobx";
-import { getCoins, getCoinsById } from "../api/getCoins";
-import { Coin, Coins } from "../@types/types";
+import { getCoins, getCoinsById, getPopularCoins } from "../api/getCoins";
+import { Coin } from "../@types/types";
 
 class CoinsStore {
-    coins?:{ data : Coin[]} = undefined;
+    coins?: Coin[]  = [];
     isLoading = false;
-    coin?:{ data : Coin}  = undefined;
+    coin?: Coin  = undefined;
     isLoadingSingleCoin = false;
     searchValue = '';
-    popularCoin?: Coin[] = undefined;
+    popularCoin?: Coin[] = [];
 
     constructor() {
         makeAutoObservable(this);
@@ -19,7 +19,7 @@ class CoinsStore {
         const data = await getCoins(searchValue);
 
         runInAction(() => {
-            this.coins = data;   
+            this.coins = data?.data;   
             this.isLoading = false;
         })
         
@@ -30,7 +30,7 @@ class CoinsStore {
         const data = await getCoinsById(id);
 
         runInAction(() => {
-            this.coin = data;
+            this.coin = data?.data;
             this.isLoadingSingleCoin = false;
         })   
     }
@@ -39,8 +39,12 @@ class CoinsStore {
         this.searchValue = value !== undefined ? value : '';
     }
 
-    setPopularCoin = (coins: Coins) => {
-        this.popularCoin = coins?.data.filter((item: Coin) => Number(item.rank) <= 3); 
+    getPopularCoin = async () => {
+        const data = await getPopularCoins();
+
+        runInAction(() => {
+           this.popularCoin = data!.data.filter((item: Coin) => Number(item.rank) <= 3);   
+        })
     }
 
 }

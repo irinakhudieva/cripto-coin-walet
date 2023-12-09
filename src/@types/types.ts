@@ -1,7 +1,3 @@
-
-export interface Coins {
-    data: Coin[]
-}
 export interface Coin extends CoinDetails {
     id: string,
     rank: string,
@@ -19,9 +15,4 @@ export interface CoinDetails {
     volumeUsd24Hr: string,
     supply: string
 }
-            
-export interface History {
-    priceUsd: string,
-    time: number
-}
-      
+   

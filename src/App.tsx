@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import AppRoutes from './routes/AppRoutes';
+import { observer } from 'mobx-react-lite';
 
 const App: React.FC = () => {
     return (
@@ -13,5 +14,5 @@ const App: React.FC = () => {
     );
 }
 
-export default App;
+export default observer(App);
 

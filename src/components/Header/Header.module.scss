@@ -19,7 +19,11 @@
         }
     }
 
-    .total {
+    .wrapper {
+        display: flex;
+        justify-content: end;
+        
+       .total {
         display: flex;
         flex-direction: row;
 
@@ -32,7 +36,9 @@
                 font-size: 17px;
                 margin-top: 7px;
             }
-        }
+        } 
+    }
+    
     }
 
     .search {

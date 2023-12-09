@@ -5,7 +5,7 @@ import { GoSearch } from 'react-icons/go';
 import { observer } from 'mobx-react-lite';
 
 const Search = () => {
-    const [searchValue, setSearchValue] = useState<string>();
+    const [searchValue, setSearchValue] = useState<string>('');
 
     const {setSearch} = coinsStore;
 
@@ -14,7 +14,7 @@ const Search = () => {
     }
 
     const handleClick = () => {
-        setSearch(searchValue!);
+        setSearch(searchValue);
         setSearchValue('')
     }
 

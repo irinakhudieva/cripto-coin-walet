@@ -8,7 +8,7 @@ type Props = {
 }
 
 const FormBuy: React.FC<Props> = ({coin}) => {
-    const [quantity, setQuantity] = useState<number>();
+    const [quantity, setQuantity] = useState<number>(0);
     const [showTotal, setShowTotal] = useState<boolean>(false);
 
     const {addToCart} = cartStore;
@@ -18,7 +18,7 @@ const FormBuy: React.FC<Props> = ({coin}) => {
     }
 
     const buyCoin = () => {
-        addToCart(coin!, quantity!)
+        addToCart(coin!, quantity)
         setShowTotal(true);
     }
 
@@ -30,10 +30,11 @@ const FormBuy: React.FC<Props> = ({coin}) => {
                 value={quantity}
                 onChange={handleChange} 
                 min='0'
+                step='0.1'
             />
             <button onClick={buyCoin}>Купить</button>
             {showTotal && (
-                <p>Вы купили {coin!.name} на сумму {(Number(+coin!.priceUsd) * quantity!).toFixed(2)} $.</p>
+                <p>Вы купили {coin!.name} на сумму {(Number(coin!.priceUsd) * quantity).toFixed(2)} $.</p>
             )}
         </div>
     )
