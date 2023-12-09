@@ -7,7 +7,7 @@ const AppRoutes = () => {
     return (
         <Routes>
             <Route path='/cripto-coin-walet' element={<CoinsList />} />
-            <Route path='/cripto-coin-walet/:id' element={<SingleCoin />} />
+            <Route path='/:id' element={<SingleCoin />} />
         </Routes>
     )
 }
