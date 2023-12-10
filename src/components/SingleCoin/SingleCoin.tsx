@@ -59,7 +59,7 @@ const SingleCoin: React.FC = observer(() => {
                     <a href={coin?.explorer}>{coin?.explorer}</a> 
                 </div>
             </div>
-            <button className={styles.back}><NavLink to='/cripto-coin-walet'>Вернуться</NavLink></button>
+            <button className={styles.back}><NavLink to='/cripto-coin-walet/'>Вернуться</NavLink></button>
         </div>
   )
 })
