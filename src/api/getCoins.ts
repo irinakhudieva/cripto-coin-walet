@@ -24,7 +24,6 @@ export const getCoinsById = async (id: string) => {
                 'Authorization': 'Bearer ' + key
             }
         });
-        console.log(res)
         return res.data;
     } catch(e) {
         console.log('ERROR', e)

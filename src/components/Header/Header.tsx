@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     return (
         <header className={styles.header}>
             <PopularCoins />
-            {location.pathname === '/cripto-coin-walet' && (
+            {location.pathname === '/cripto-coin-walet/' && (
                 <Search /> 
             )}
             <Total setModal={setModal} />
