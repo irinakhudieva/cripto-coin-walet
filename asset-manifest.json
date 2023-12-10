@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cripto-coin-walet/static/css/main.af324d56.css",
-    "main.js": "/cripto-coin-walet/static/js/main.407bae9a.js",
+    "main.js": "/cripto-coin-walet/static/js/main.c6dbf884.js",
     "index.html": "/cripto-coin-walet/index.html",
     "main.af324d56.css.map": "/cripto-coin-walet/static/css/main.af324d56.css.map",
-    "main.407bae9a.js.map": "/cripto-coin-walet/static/js/main.407bae9a.js.map"
+    "main.c6dbf884.js.map": "/cripto-coin-walet/static/js/main.c6dbf884.js.map"
   },
   "entrypoints": [
     "static/css/main.af324d56.css",
-    "static/js/main.407bae9a.js"
+    "static/js/main.c6dbf884.js"
   ]
 }
